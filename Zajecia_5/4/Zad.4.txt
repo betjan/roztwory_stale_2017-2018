@@ -1,0 +1,18 @@
+Zadanie 4 - Aleksandra Cebrat, Mateusz Wróbel
+ 
+deltaE=0,01 -> mean_cov=59.62295 +- 4.88875682536
+deltaE=0,02 -> mean_cov=68.51386 +- 4.5397651812
+deltaE=0,03 -> mean_cov=76.60904 +- 4.31569812179
+deltaE=0,04 -> mean_cov=82.71892 +- 3.71476163887
+deltaE=0,05 -> mean_cov=87.44365 +- 3.30210609725
+deltaE=0,06 -> mean_cov=91.27193 +- 2.70103759232
+deltaE=0,08 -> mean_cov=95.5416 +- 2.06609521562
+deltaE=0,10 -> mean_cov=97.92047 +- 1.40989537878
+
+1)
+deltaE=0,01 -> n=377
+deltaE=0,02 -> n=430
+deltaE=0,03 -> n=481
+deltaE=0,04 -> n=529
+deltaE=0,05 -> n=573
+deltaE=0,06 -> n=614
