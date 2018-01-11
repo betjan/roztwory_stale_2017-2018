@@ -39,4 +39,12 @@ dE=10000000000000000
 
 3) Jeżeli "i" jest najbardziej prawdopodobnym stanem, to prawdopodobieństwa dla "kroku w tył" i "kroku w przód" powinny być sobie równe.
 
-4)
+4) wyrażenie na "i" w funkcji dE:
+
+(Ns-i)/Ns = (i/Ns)exp(-dE/kbT)
+i(dE)=?
+1-(i/Ns)=(i/Ns)exp(-dE/kbT)
+1=(i/Ns)[exp(-dE/kbT)+1]
+i=Ns[1/exp(-dE/kbT)+1]
+
+
