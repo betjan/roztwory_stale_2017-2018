@@ -1,0 +1,835 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     24741,        826]
+NotebookOptionsPosition[     23569,        782]
+NotebookOutlinePosition[     23948,        798]
+CellTagsIndexPosition[     23905,        795]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+\[OpenCurlyDoubleQuote]Roztwory sta\[LSlash]e i termodynamika \
+defekt\[OAcute]w w ciele sta\[LSlash]ym\[CloseCurlyDoubleQuote] : 
+Zadania dodatkowe - dyfuzja 1-dim (12.01.2018)\
+\>", "Title",
+ CellChangeTimes->{{3.7247360676663446`*^9, 3.7247361155340824`*^9}, {
+  3.7247465873194294`*^9, 3.724746597696023*^9}}],
+
+Cell["\<\
+Zadanie 1) B\[LSlash]\:0105dzenie przypadkowe jako suma krok\[OAcute]w cz\
+\:0105stkowych - warto\:015b\[CAcute] oczekiwana przemieszczenia\
+\>", "Subtitle",
+ CellChangeTimes->{{3.7247361247016068`*^9, 3.724736127191749*^9}, {
+  3.724736159847617*^9, 3.7247362213991375`*^9}}],
+
+Cell["Tre\:015b\[CAcute]", "Subsubtitle",
+ CellChangeTimes->{{3.7247384567879944`*^9, 3.7247384576470437`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Niech ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox[" b\:0119dzie zmienn\:0105 losow\:0105, przyjmuj\:0105c\:0105 warto\
+\:015bci: \n\n",
+  FontSize->24],
+ Cell[BoxData[
+  RowBox[{"{", GridBox[{
+     {
+      RowBox[{"1", ",", "  ", 
+       RowBox[{"z", " ", 
+        RowBox[{"prawdopodobie\:0144stwem", " ", "'"}], 
+        StyleBox[
+         RowBox[{
+          StyleBox["p",
+           FontWeight->"Bold"], "'"}],
+         FontSlant->"Italic"]}]}]},
+     {
+      RowBox[{
+       RowBox[{"-", "1"}], ",", " ", 
+       RowBox[{
+        RowBox[{"z", " ", 
+         RowBox[{"prawdopodobie\:0144stwem", " ", "'"}], 
+         StyleBox["1",
+          FontWeight->"Bold"]}], 
+        StyleBox["-",
+         FontWeight->"Bold"], 
+        RowBox[{
+         StyleBox["p",
+          FontWeight->"Bold"], "'"}]}]}]}
+    }], "\[NoBreak]"}]],
+  FontSize->24],
+ StyleBox[" (1)\n\n, gdzie p\[Element](0,1)\n\nZmienn\:0105 t\:0105 \
+mo\:017cna uto\:017csamia\[CAcute] z przemieszczeniem w pojedynczym kroku b\
+\[LSlash]\:0105dzenia przypadkowego 1-dim, \nw kt\[OAcute]rym preferencja kt\
+\[OAcute]rego\:015b z kierunk\[OAcute]w jest zale\:017cna od warto\:015bci \
+\[OpenCurlyQuote]",
+  FontSize->24],
+ StyleBox["p",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox["\[CloseCurlyQuote]. \nNiech ",
+  FontSize->24],
+ StyleBox["t",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox[" b\:0119dzie czasem trwania b\[LSlash]\:0105dzenia przypadkowego, \
+kt\[OAcute]ry w tym przypadku przyjmujemy za to\:017csamy z liczb\:0105 krok\
+\[OAcute]w. \nNiech ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    SubscriptBox["X", "sum"],
+    FontWeight->"Bold"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[" oznacza zmienn\:0105 losow\:0105 opisuj\:0105c\:0105 \
+przemieszczenie po ",
+  FontSize->24],
+ StyleBox["t",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox["-krokach. \n \nZmienna ta stanowi prost\:0105 sum\:0119 \
+przemieszcze\:0144 cz\:0105stkowych:\n\n",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    SubscriptBox["X", "sum"],
+    FontWeight->"Bold"], TraditionalForm]],
+  FontSize->24],
+ StyleBox[" = ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["+",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "2"], TraditionalForm]],
+  FontSize->24],
+ StyleBox["+",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "3"], TraditionalForm]],
+  FontSize->24],
+ StyleBox["+...+",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "t"], TraditionalForm]],
+  FontSize->24],
+ StyleBox[" (2)\n\n, gdzie dowolne dwie zmienne cz\:0105stkowe ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[",",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "j"], TraditionalForm]],
+  FontSize->24],
+ StyleBox[" s\:0105 wzajemnie niezale\:017cne, o ile i\[NotEqual]j. Niech E[] \
+oznacza operator warto\:015bci oczekiwanej. \nDla pary zmiennych \
+niezale\:017cnych zachodzi:\n\nE[",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "j"], TraditionalForm]],
+  FontSize->24],
+ StyleBox["] = E[",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["]\[Cross]E[",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "j"], TraditionalForm]],
+  FontSize->24],
+ StyleBox["] (3)\n\n",
+  FontSize->24],
+ StyleBox["Pytania:",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox["\n\n",
+  FontSize->24],
+ StyleBox["1)",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox[" Ile wynosi E[",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "sum"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["]? Je\:015bli ",
+  FontSize->24],
+ StyleBox["p",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox["=0.5, ile wynosi E[",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "sum"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["] i czy mo\:017ce by\[CAcute] stosowane jako miara dyfuzji w \
+czasie?\n",
+  FontSize->24],
+ StyleBox["2)",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox[" Rozwa\:017c \:015bredni kwadrat przemieszczenia: E[",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["X", "sum"], "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["]. Poka\:017c bezpo\:015brednim rachunkiem zale\:017cno\:015b\
+\[CAcute] E[",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["X", "sum"], "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["] od ",
+  FontSize->24],
+ StyleBox["t",
+  FontSize->24,
+  FontSlant->"Italic"],
+ StyleBox[" dla p=",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[", rozpisuj\:0105c ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["X", "sum"], "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[".\n",
+  FontSize->24],
+ StyleBox["3)",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox[" Dla identycznych zmiennych niezale\:017cnych (ang. ",
+  FontSize->24],
+ StyleBox["i.i",
+  FontSize->24,
+  FontSlant->"Italic"],
+ StyleBox[".",
+  FontSize->24],
+ StyleBox["d",
+  FontSize->24,
+  FontSlant->"Italic"],
+ StyleBox[".), wariancja ich sumy spe\[LSlash]nia \
+zale\:017cno\:015b\[CAcute]:\n\nvar(",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["+",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "j"], TraditionalForm]],
+  FontSize->24],
+ StyleBox[") = var(",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[") + var(",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "j"], TraditionalForm]],
+  FontSize->24],
+ StyleBox[")  (4)\n\nPonadto, jedna z definicji wariancji m\[OAcute]wi, \
+\:017ce:\n\nvar(",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[") = E[",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["X", "i"], "2"], TraditionalForm]],
+  FontSize->24],
+ StyleBox["] - E[",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["  (5)\n\nWykorzystaj powy\:017csze w\[LSlash]a\:015bciwo\:015bci \
+dla ponownego obliczenia E[",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["X", "sum"], "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["] zaczynaj\:0105c od wariancji pojedynczego kroku var(",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[")",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.7247362381750975`*^9, 3.72473636830254*^9}, {
+   3.724736404093587*^9, 3.724736562090624*^9}, {3.724736595222519*^9, 
+   3.724736605776123*^9}, {3.724736667812671*^9, 3.724736729734213*^9}, {
+   3.7247367861054373`*^9, 3.7247369498388023`*^9}, {3.7247370142734876`*^9, 
+   3.7247372117697835`*^9}, {3.724737246178752*^9, 3.7247374555047245`*^9}, {
+   3.7247375133740344`*^9, 3.724737527336833*^9}, {3.724737566549076*^9, 
+   3.7247376987796392`*^9}, {3.7247381107162004`*^9, 
+   3.7247382952087526`*^9}, {3.7247383271795816`*^9, 3.724738440681073*^9}, {
+   3.7247384847115917`*^9, 3.724738488805826*^9}, {3.724746456918971*^9, 
+   3.7247464924040003`*^9}, {3.724746560805913*^9, 3.724746570404462*^9}, 
+   3.7247474060052557`*^9}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+
+Rozwi\:0105zanie\
+\>", "Subsubtitle",
+ CellChangeTimes->{{3.7247384567879944`*^9, 3.724738474106985*^9}, 
+   3.7247464692386756`*^9}],
+
+Cell["", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Zadanie 2) Centralne twierdzenie graniczne (CLT), a b\
+\[LSlash]\:0105dzenie przypadkowe ",
+ FontSize->36]], "Subtitle",
+ CellChangeTimes->{{3.7247361247016068`*^9, 3.724736127191749*^9}, {
+   3.724736159847617*^9, 3.7247362213991375`*^9}, 3.724738503795683*^9, {
+   3.7247385431559343`*^9, 3.7247385889245524`*^9}}],
+
+Cell["Tre\:015b\[CAcute]", "Subsubtitle",
+ CellChangeTimes->{{3.7247384567879944`*^9, 3.7247384576470437`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Przypomnijmy wyra\:017cenie na normalny (Gaussowski) \
+rozk\[LSlash]ad prawdopodobie\:0144stwa:\n\nN(\[Mu],",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Sigma]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[") = ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"\[Sigma]", 
+     SqrtBox[
+      RowBox[{"2", "\[Pi]"}]]}]], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["e", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"x", "-", "\[Mu]"}], ")"}], "2"]}], "/", "2"}], 
+     SuperscriptBox["\[Sigma]", "2"]}]], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[" (6)\n\n, gdzie\n\n \[Mu] - warto\:015b\[CAcute] oczekiwana \
+(\:015brednia) rozk\[LSlash]adu\n ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Sigma]", "2"], TraditionalForm]],
+  FontSize->24],
+ StyleBox[" - wariancja rozk\[LSlash]adu (\[Sigma] to odchylenie standardowe)",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.7247362381750975`*^9, 3.72473636830254*^9}, {
+   3.724736404093587*^9, 3.724736562090624*^9}, {3.724736595222519*^9, 
+   3.724736605776123*^9}, {3.724736667812671*^9, 3.724736729734213*^9}, {
+   3.7247367861054373`*^9, 3.7247369498388023`*^9}, {3.7247370142734876`*^9, 
+   3.7247372117697835`*^9}, {3.724737246178752*^9, 3.7247374555047245`*^9}, {
+   3.7247375133740344`*^9, 3.724737527336833*^9}, {3.724737566549076*^9, 
+   3.7247376987796392`*^9}, {3.7247381107162004`*^9, 
+   3.7247382952087526`*^9}, {3.7247383271795816`*^9, 3.724738440681073*^9}, {
+   3.7247384847115917`*^9, 3.724738488805826*^9}, {3.724738627115737*^9, 
+   3.724738702461046*^9}, {3.724738764730608*^9, 3.7247388451172056`*^9}, {
+   3.724738922687642*^9, 3.7247389826800737`*^9}, {3.7247399549146824`*^9, 
+   3.7247399557977333`*^9}, 3.7247467723570127`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", "  ", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", 
+       RowBox[{"\[Sigma]", 
+        SqrtBox[
+         RowBox[{"2", "\[Pi]"}]]}]], "*", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"x", "-", "\[Mu]"}], ")"}], "^", "2"}]}], "/", 
+        RowBox[{"(", 
+         RowBox[{"2", 
+          RowBox[{"\[Sigma]", "^", "2"}]}], ")"}]}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0.5"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"Filling", "\[Rule]", "Axis"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Mu]", ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Sigma]", ",", "1", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.724738992104613*^9, 3.724739034031011*^9}, {
+   3.724739068367975*^9, 3.7247391143926077`*^9}, {3.7247391812734327`*^9, 
+   3.7247393508561325`*^9}, 3.7247394081234083`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Mu]$$ = 0., $CellContext`\[Sigma]$$ = 
+    1.528, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Mu]$$], 0, 2}, {
+      Hold[$CellContext`\[Sigma]$$], 1, 3}}, Typeset`size$$ = {
+    540., {171., 181.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Mu]$5291$$ = 
+    0, $CellContext`\[Sigma]$5292$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`\[Mu]$$ = 0, $CellContext`\[Sigma]$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Mu]$$, $CellContext`\[Mu]$5291$$, 0], 
+        Hold[$CellContext`\[Sigma]$$, $CellContext`\[Sigma]$5292$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[(1/($CellContext`\[Sigma]$$ (2 Pi)^Rational[1, 2])) 
+        Exp[(-($CellContext`x - $CellContext`\[Mu]$$)^2)/(
+          2 $CellContext`\[Sigma]$$^2)], {$CellContext`x, -10, 10}, 
+        PlotRange -> {{-10, 10}, {0, 0.5}}, Filling -> Axis], 
+      "Specifications" :> {{$CellContext`\[Mu]$$, 0, 
+         2}, {$CellContext`\[Sigma]$$, 1, 3}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{610., {259., 266.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7247392626680884`*^9, {3.724739315022083*^9, 3.724739351725182*^9}, 
+   3.7247394097425003`*^9}]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Centralne Twierdzenie Graniczne (",
+  FontSize->24],
+ StyleBox["CLT",
+  FontSize->24,
+  FontSlant->"Italic"],
+ StyleBox[" - ",
+  FontSize->24],
+ StyleBox["Central Limit Theorem",
+  FontSize->24,
+  FontSlant->"Italic"],
+ StyleBox[") dla identycznych zmiennych niezale\:017cnych",
+  FontSize->24]
+}], "Subsection",
+ CellChangeTimes->{{3.7247394994206295`*^9, 3.724739523399001*^9}, {
+   3.7247396922246575`*^9, 3.724739723669456*^9}, 3.724746803764809*^9, {
+   3.7247469234496546`*^9, 3.724746926422825*^9}}],
+
+Cell[TextData[{
+ StyleBox["Je\:015bli ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["S", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[" = ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["+",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["+....",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[" i ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox["\[And]", 
+    RowBox[{"i", ",", 
+     RowBox[{"j", "\[NotEqual]", "i"}]}]], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[", ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "j"], TraditionalForm]],
+  FontSize->24],
+ StyleBox[" s\:0105 niezale\:017cne, w\[OAcute]wczas (\[Mu] to warto\:015b\
+\[CAcute] oczekiwana ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FontSize->24],
+ StyleBox[", ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Sigma]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["-wariancja ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox["):\n\n",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox[
+    RowBox[{" ", "lim"}], 
+    RowBox[{"n", "\[Rule]", "\[Infinity]"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->36],
+ StyleBox["P(",
+  FontSize->36],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Z", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->36],
+ StyleBox["\[LessEqual]z) = P(",
+  FontSize->36],
+ Cell[BoxData[
+  FormBox["Z", TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->36],
+ StyleBox["\[LessEqual]z) (7) (Centralne Twierdzenie Graniczne)",
+  FontSize->36],
+ StyleBox["\n\n, gdzie ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Z", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[" = ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SubscriptBox["S", 
+      StyleBox["n",
+       FontSize->18]], "-", "n\[Mu]"}], 
+    RowBox[{
+     SqrtBox["n"], "\[Sigma]"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[" (Zmienna ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["S", 
+    StyleBox["n",
+     FontSize->18]], TraditionalForm]],
+  FontSize->24],
+ StyleBox[" przesuni\:0119ta do \:015brodka uk\[LSlash]adu wsp\[OAcute]\
+\[LSlash]rz\:0119dnych (-n\[Mu]) i podzielona przez odchylenie standardowe (",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SqrtBox["n"], "\[Sigma]"}], TraditionalForm]],
+  FontSize->24],
+ StyleBox["), czyli ",
+  FontSize->24],
+ StyleBox["znormalizowana",
+  FontSize->24,
+  FontVariations->{"Underline"->True}],
+ StyleBox[" )\n\n, za\:015b Z ~ N(0,1) (tzw. rozk\[LSlash]ad normalny \
+standardowy (",
+  FontSize->24],
+ StyleBox["standard normal random variable",
+  FontSize->24,
+  FontSlant->"Italic"],
+ StyleBox["))",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.724739547256366*^9, 3.7247395758009987`*^9}, {
+  3.724739730714859*^9, 3.724739730944872*^9}, {3.724739809691376*^9, 
+  3.724740020099411*^9}, {3.7247401294006624`*^9, 3.724740330923189*^9}, {
+  3.7247410445230045`*^9, 3.724741174153419*^9}, {3.72474690553763*^9, 
+  3.724746916564261*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Interpretacja praktyczna i pytania\
+\>", "Subsection",
+ CellChangeTimes->{{3.724740093148589*^9, 3.724740103402176*^9}}],
+
+Cell[TextData[{
+ StyleBox["W praktyce, powy\:017csze twierdzenie interpretujemy cz\:0119sto \
+nast\:0119puj\:0105co:\n\n ",
+  FontSize->24],
+ StyleBox["Je\:015bli n jest dostatecznie du\:017ce (n=30 zazwyczaj \
+wystarcza), rozk\[LSlash]ad prawdopodobie\:0144stwa zmiennej ",
+  FontSize->24,
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["S", "n"], TraditionalForm]],
+  FontSize->24,
+  FontSlant->"Italic"],
+ StyleBox[" mo\:017ce by\[CAcute] doskonale przybli\:017cony przez N(n\[Mu],n",
+  FontSize->24,
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    StyleBox["\[Sigma]",
+     FontSize->14], "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24],
+ StyleBox[")",
+  FontSize->24,
+  FontSlant->"Italic"],
+ StyleBox[".\n \n Pytania:\n \n ",
+  FontSize->24],
+ StyleBox["1) ",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox["Jak\:0105 form\:0119 przyjmie rozk\[LSlash]ad \
+prawdopodobie\:0144stwa przemieszczenia dla b\[LSlash]\:0105dzenia \
+przypadkowego w przypadku og\[OAcute]lnym i dla p=0.5, \
+zak\[LSlash]adaj\:0105c, \:017ce mo\:017cna stosowa\[CAcute] CLT?\n ",
+  FontSize->24],
+ StyleBox["2)",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox[" Zastan\[OAcute]w si\:0119, czy CLT mo\:017ce znale\:017a\[CAcute] \
+zastosowanie do opisu rozk\[LSlash]adu prawdopodobie\:0144stwa \
+d\[LSlash]ugoterminowego w prostym modelu adsorpcji?  Jakiej wielko\:015bci \
+odpowiada\[LSlash]oby ",
+  FontSize->24],
+ StyleBox["t ",
+  FontSize->24,
+  FontSlant->"Italic"],
+ StyleBox["?\n \n Wskaz\[OAcute]wka: Rozpatrz proces, w kt\[OAcute]rym nast\
+\:0119puje iteracja po wszystkich w\:0119z\[LSlash]ach i losujemy, czy dany w\
+\:0119ze\[LSlash] b\:0119dzie obsadzony.\n \n ",
+  FontSize->24],
+ StyleBox["3*) ",
+  FontSize->24,
+  FontWeight->"Bold"],
+ StyleBox["Jaki by\[LSlash]by zwi\:0105zek mi\:0119dzy ",
+  FontSize->24],
+ StyleBox["p",
+  FontSize->24,
+  FontSlant->"Italic"],
+ StyleBox[" w b\[LSlash]\:0105dzeniu przypadkowym, a \[CapitalDelta]E w \
+modelu? Przeprowad\:017a pe\[LSlash]n\:0105 analiz\:0119, \
+prowadz\:0105c\:0105 do otrzymania jawnej postaci rozk\[LSlash]adu \
+Gaussowskiego. \n Narysuj na jednym wykresie ten rozk\[LSlash]ad i list\:0119 \
+\[OpenCurlyQuote]probs\[CloseCurlyQuote] (output longterm_anal_chain) \
+adsorption_rev_bern.py dla \[CapitalDelta]E=0.02 i Ns=100.  ",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.7247404071945515`*^9, 3.724740516576808*^9}, {
+   3.724740921466966*^9, 3.7247409575830317`*^9}, {3.72474099514218*^9, 
+   3.7247410250998936`*^9}, {3.7247411979777813`*^9, 3.724741483838132*^9}, {
+   3.724741538539261*^9, 3.7247415405083733`*^9}, {3.7247415709251127`*^9, 
+   3.724741588474117*^9}, {3.7247416225590663`*^9, 3.72474170672688*^9}, {
+   3.724741768353405*^9, 3.724741808543704*^9}, {3.7247419202370925`*^9, 
+   3.724741939402189*^9}, {3.724742088507717*^9, 3.7247420887107286`*^9}, {
+   3.724745928041721*^9, 3.724746332789871*^9}, 3.724746865268327*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rozwi\:0105zanie", "Subsubtitle",
+ CellChangeTimes->{{3.7247384567879944`*^9, 3.724738474106985*^9}}],
+
+Cell["", "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{2530, 1282},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+Magnification->1.5000001192092896`,
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 323, 6, 203, "Title"],
+Cell[905, 30, 286, 5, 74, "Subtitle"],
+Cell[1194, 37, 111, 1, 42, "Subsubtitle"],
+Cell[1308, 40, 8432, 311, 1580, "Text"],
+Cell[CellGroupData[{
+Cell[9765, 355, 144, 5, 71, "Subsubtitle"],
+Cell[9912, 362, 16, 0, 41, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9965, 367, 340, 5, 94, "Subtitle"],
+Cell[10308, 374, 111, 1, 42, "Subsubtitle"],
+Cell[10422, 377, 2014, 52, 403, "Text"],
+Cell[CellGroupData[{
+Cell[12461, 433, 1279, 37, 78, "Input"],
+Cell[13743, 472, 2088, 42, 549, "Output"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[15865, 519, 533, 16, 73, "Subsection"],
+Cell[16401, 537, 3825, 148, 428, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20263, 690, 130, 3, 54, "Subsection"],
+Cell[20396, 695, 2970, 74, 750, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23403, 774, 107, 1, 42, "Subsubtitle"],
+Cell[23513, 777, 16, 0, 41, "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
